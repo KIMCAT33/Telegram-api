@@ -1,8 +1,9 @@
 const { Bot } = require("grammy");
 const { Menu } = require("@grammyjs/menu");
 var express = require('express');
+require('dotenv').config();
 
-const bot = new Bot("5527167347:AAFg51t0sd4lTYYLJndy7C1XhgKEdj4YoiE");
+const bot = new Bot(process.env.TELEGRAM_TOKEN);
 var router = express.Router();
 
 
