@@ -44,7 +44,10 @@ router.post('/bot', function(req, res, next) {
     `[Tonic Lounge] 🐤 Please Click button below to Enter your private Community Space:"`,
     { reply_markup: inlineKeyboard },
   );
-  res.render('index', { title: 'Express' });
+  res.setHeader('Access-Control-Allow-origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('ok');
 });
 
 
